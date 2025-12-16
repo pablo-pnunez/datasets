@@ -124,7 +124,7 @@ def run_scraper():
     driver.execute_cdp_cmd('Network.enable', {})
     driver.execute_cdp_cmd('Network.setExtraHTTPHeaders', {'headers': HEADERS})
 
-    base_url = 'https://www.idealista.com/venta-viviendas/gijon/centro/'
+    base_url = 'https://www.idealista.com/venta-viviendas/gijon-asturias/con-solo-pisos/' # 'https://www.idealista.com/venta-viviendas/gijon/centro/'
     all_properties = []
 
     try:
@@ -143,7 +143,7 @@ def run_scraper():
         time.sleep(2)
 
         # 2. Bucle por páginas
-        for page in range(1, 11):
+        for page in range(1, 35):
             if page == 1:
                 url = base_url
             else:
